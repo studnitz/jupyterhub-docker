@@ -5,7 +5,9 @@ c.Spawner.default_url = '/lab'
 ## Configure authentication (delagated to GitLab)
 from oauthenticator.gitlab import GitLabOAuthenticator
 c.JupyterHub.authenticator_class = GitLabOAuthenticator
-
+c.GitLabOAuthenticator.oauth_callback_url = 'http://localhost/hub/oauth_callback'
+c.GitLabOAuthenticator.client_id = '27038842dc1108b3e57f8093f3d7af3dab658997ad796f4abb816ecd82ae6c73'
+c.GitLabOAuthenticator.client_secret = '0600900be608f4c02bc349013f41e14d6b9f54afbe59c6ce3aa9de904a90781d'
 c.Authenticator.admin_users = { 'studnitz' }
 
 
